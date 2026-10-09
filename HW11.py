@@ -23,11 +23,13 @@ elif list1[2] > list1[0] and list1[2] > list1[1]:
 #5. Tie the result (the largest number) from #4 to a variable called "num".
 print(num)
 #6. Create a nested if statement that prints if num is divisible by 2, divisible by 3, both, or neither.
-if  num % 2 == 0 and num % 3 == 0:
-    print("divisible by both")
-elif num % 2 == 0:
-    print("divisible by 2")
-elif num % 3 == 0:
-    print("divisible by 3")
+if num % 2 == 0:
+    if num % 3 == 0:
+        print("divisible by both")
+    else:
+        print("divisible by two")
 else:
-    print("Not divisible by anything")
+    if num % 3 == 0:
+        print("divisible by 3")
+    else:
+        print("divisible by none")
